@@ -62,15 +62,18 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
+/*
+I: given input string
+O: return a new string with dash-case
+C: return
+E:
 
-
-
-
+*/
 
     return string
     // string to lowercase
        .toLowerCase()
-    // split string 
+    // split string by non-alphanumeric characters
        .split(/[^a-z0-9]+/)
     // join string with dashes
        .join('-');
@@ -92,7 +95,15 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
+   /*
+   I: Given a string and a single character
+   O: return true if the string begins with the character, false otherwise
+   C: return true or false
+   E:
+   */
+    if (string[0].lowerCase() === char.lowerCase()){
+      return string.charAt[0] === char
+    }
     
 
     // YOUR CODE ABOVE HERE //
@@ -125,7 +136,7 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+return stringOne + stringTwo;
 
 
     // YOUR CODE ABOVE HERE //
@@ -160,7 +171,11 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    if(stringOne.length > stringTwo.length){ // if stringOne is longer than stringTwo
+        return stringOne;   //return stringOne
+    } else {
+        return stringTwo;    
+    }
 
 
     // YOUR CODE ABOVE HERE //
@@ -175,7 +190,15 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+  var comparison = stringOne.localeCompare(stringTwo);
+  
+  if (comparison > 0) {
+    return 1;
+  } else if (comparison < 0) {
+    return -1;
+  } else {
+    return 0;
+  }
 
 
     // YOUR CODE ABOVE HERE //

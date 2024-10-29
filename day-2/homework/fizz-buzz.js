@@ -12,6 +12,24 @@
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
+    // loop starts at 1 and iterates down from 100
+    for (var i = 1; i <= 100; i++){  
+        // if multiple oof 3 and 5 print fizzbuzz
+        if (i % 3 === 0 && i % 5 === 0){
+            console.log('FizzBuzz');
+            // if multiple of 3 print fizz
+        } else if (i % 3 === 0){
+            console.log('Fizz');
+            // if multiple of 5 print buzz
+        } else if (i % 5 === 0){
+            console.log('Buzz');
+            // if it doenst meet any of the above print the i
+        } else {
+            console.log(i);
+        }
+    }
+
+
 
 
 
