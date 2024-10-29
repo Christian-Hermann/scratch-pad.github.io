@@ -65,6 +65,16 @@ function toDashCase(string) {
 
 
 
+
+
+    return string
+    // string to lowercase
+       .toLowerCase()
+    // split string 
+       .split(/[^a-z0-9]+/)
+    // join string with dashes
+       .join('-');
+
     // YOUR CODE ABOVE HERE //
 }
 
