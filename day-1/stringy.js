@@ -101,9 +101,9 @@ function beginsWith(string, char) {
    C: return true or false
    E:
    */
-    if (string[0].lowerCase() === char.lowerCase()){
-      return string.charAt[0] === char
-    }
+     if (string.lowerCase() === char.lowerCase()){
+        return string[0] === char
+     }
     
 
     // YOUR CODE ABOVE HERE //
