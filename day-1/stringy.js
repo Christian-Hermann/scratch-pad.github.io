@@ -101,8 +101,10 @@ function beginsWith(string, char) {
    C: return true or false
    E:
    */
-     if (string.lowerCase() === char.lowerCase()){
-        return string[0] === char
+     if (string[0].toLowerCase() === char.toLowerCase()){
+        return true
+     } else {
+        return false
      }
     
 
@@ -123,8 +125,9 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-
+   var str = string.toLowerCase();
+   var char1 = char.toLowerCase();
+   return str[str.length - 1] === char1
 
     // YOUR CODE ABOVE HERE //
 }
@@ -196,7 +199,7 @@ function sortAscending(stringOne, stringTwo) {
     return 1;
   } else if (result < 0) {
     return -1;
-  } else if (result === 0){
+  } else {
     return 0
   }
 
