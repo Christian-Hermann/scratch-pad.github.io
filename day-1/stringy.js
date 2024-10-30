@@ -155,7 +155,7 @@ return stringOne + stringTwo;
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+    return args.join("");
 
     // YOUR CODE ABOVE HERE //
 }
@@ -190,14 +190,14 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-  var comparison = stringOne.localeCompare(stringTwo);
+  var result = stringOne.localeCompare(stringTwo);
   
-  if (comparison > 0) {
+  if (result > 0) {
     return 1;
-  } else if (comparison < 0) {
+  } else if (result < 0) {
     return -1;
-  } else {
-    return 0;
+  } else if (result === 0){
+    return 0
   }
 
 
