@@ -102,8 +102,25 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
+ /*
+ I: given an array of strings
+ O: return the array of strings modified
+ C: use a for loop and create an empty array to hold modified array
+ E: NA
+ */   
+ 
+ // create empty array
+ var arr = []; 
+ // for loop to loop through strings
+ for(var i = 0; i < strings.length; i++){
+ // new string to hold modified strings
+ var newString = modify(strings[i]);
+ // push modified array into new array
+ arr.push(newString);
+ }
+ 
+ return arr;
+
     
     
     // YOUR CODE ABOVE HERE //
