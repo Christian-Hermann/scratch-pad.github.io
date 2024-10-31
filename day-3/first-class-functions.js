@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { startsWith } = require("lodash");
+
 /**
  * IN CLASS EXERCISE: FIRST CLASS FUNCTIONS
  */
@@ -31,10 +33,19 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
   
-    
-    
+  /*
+  I:input base could be string or number
+  O:return a funtion that tests whether value is less than base T/F
+  C:
+  E:
+  */  
+    return function(value){
+        return value < base;
+    }
+  
+  
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -47,7 +58,16 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+ /*
+ I: given a single character
+ O: return a function that tests whether a given string starts with the startsWith character
+ C: needs to be case insensitive
+ E: NA
+ */
+     return function(string){
+     return string[0].toLowerCase() === startsWith.toLowerCase()
+}
+
     
     
     
@@ -63,7 +83,10 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+
+    return function(string) {
+    return string[string.length -1].toLowerCase() === endsWith.toLowerCase()
+    }
     
     
     
