@@ -36,6 +36,11 @@
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
     
+    return {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast,
+    }  
 } 
 
 
@@ -48,7 +53,13 @@ function makeContactList() {
     
     return {
         // we implemented the length api for you //
-       
+       length: function(){
+        return contacts.length;
+       },
+       addContact: function(contact){
+        contacts.push(contact);
+       },
+       findContact: function(fullName)
     }
 }
 
