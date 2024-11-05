@@ -141,9 +141,15 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
+    var ouput = [];
+    for(var i = 0; i < strings.length; i++){
+        output.push(strings[i].startsWith('C'));
+    }
     
     
-    
+
+
+    return output
     // YOUR CODE ABOVE HERE //
 }
 

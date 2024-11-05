@@ -59,7 +59,10 @@ function makeContactList() {
        addContact: function(contact){
         contacts.push(contact);
        },
-       findContact: function(fullName)
+       findContact: function(fullName){
+        return c
+       }
+    
     }
 }
 

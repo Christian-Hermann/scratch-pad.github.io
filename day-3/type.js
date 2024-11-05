@@ -39,8 +39,7 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-
+    return typeof value === 'object' && value !== null && !Array.isArray(value) && !(value instanceof Date);
     
     
     
@@ -57,9 +56,7 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    return Array.isArray(value) || typeof value === 'object' && value !== null && !Array.isArray(value) && !(value instanceof Date);
     
     // YOUR CODE ABOVE HERE //
 }
@@ -86,9 +83,10 @@ function isCollection(value) {
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
-    
+
+
+
+
     // YOUR CODE ABOVE HERE //
 }
 
