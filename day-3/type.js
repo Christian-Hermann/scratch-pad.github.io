@@ -82,7 +82,16 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
+    if (value === null){
+        return 'null';
+    }
+    if (Array.isArray(value)){
+        return 'array';
+    }
+    if (value instanceof Date){
+        return 'date';
+
+    } return typeof value;
 
 
 
