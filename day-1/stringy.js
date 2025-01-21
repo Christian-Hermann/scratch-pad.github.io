@@ -149,10 +149,11 @@ console.log(endsWith("Christian", "c"))
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+return stringOne + stringTwo
 
     // YOUR CODE ABOVE HERE //
 }
+console.log("christian","Hermann")
 
 /**
  * Given any number of Strings, return all of them joined together.
@@ -167,10 +168,12 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+    console.log(args)
+    return args.join('')
 
     // YOUR CODE ABOVE HERE //
 }
+console.log(join("Christian","Hermann", "he", "her"))
 
 /**
  * Given two Strings, return the longest of the two.
