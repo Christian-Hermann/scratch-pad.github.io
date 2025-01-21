@@ -184,13 +184,30 @@ console.log(join("Christian","Hermann", "he", "her"))
  *
  * TIP: What property of the String do we need to compare?
  */
+/*
+I: given two strings
+O: return the longest string 
+C: NA
+E: what if they're the same length
+*/
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
+// find lengths of the strings
+
+// compare the lengths of the strings
+if (stringOne.length > stringTwo.length){
+    return stringOne
+} else {
+    return stringTwo
+}
+// return the longest string
 
 
     // YOUR CODE ABOVE HERE //
 }
+
+console.log(longest("Christian", "Kit"))
 
 /**
  * Given two Strings, return 1 if the first string is higher in alphabetical order (meaning earlier in the alphabet) than
@@ -199,11 +216,26 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+
+/*
+I: given two strings
+O: return 1 if first string is higher in alphabetical order than second string
+   return -1 if second string is higer in alphabetical order than first string
+   return 0 if equal
+C: NA
+E: NA
+*/
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
+ return stringTwo.localeCompare(stringOne)
+  
+
+r
+
     // YOUR CODE ABOVE HERE //
 }
+console.log(sortAscending("Chritian", "Hermann"))
 
 
 /**
@@ -216,7 +248,7 @@ function sortAscending(stringOne, stringTwo) {
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+return stringOne.localeCompare(stringTwo)
 
 
     // YOUR CODE ABOVE HERE //
