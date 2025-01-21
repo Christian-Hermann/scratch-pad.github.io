@@ -73,7 +73,7 @@ return string.toUpperCase()
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 
-
+  return string.replace(/\s+/g, '-').toLowerCase()
 
     // YOUR CODE ABOVE HERE //
 }
@@ -91,12 +91,33 @@ function toDashCase(string) {
  *      ensure uppercase and lowercase can be compared equally?
  */
 function beginsWith(string, char) {
+/*
+I: given input string and a single character
+O: return true if string begins with character, false otherwise
+C: case insensitive
+E: NA
+*/
     // YOUR CODE BELOW HERE //
-
+/*
+    // set string and char to lowercase
+    var newString = string.toLowerCase()
+    console.log(newString)
+    var newChar = char.toLowerCase()
+    console.log(newChar)
+    // return true if string begins with char
+    if (newString[0] === newChar){
+        return true
+    } else {
+        return false
+    }
+    // return false if not equal
     
-
+*/
+   return string[0].toLowerCase() === char.toLowerCase()
     // YOUR CODE ABOVE HERE //
 }
+
+console.log(beginsWith("Christian", "c"))
 
 /**
  * Given an input String and a single character, return true if the String
@@ -113,10 +134,12 @@ function beginsWith(string, char) {
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
-
+return string[string.length - 1].toLowerCase() === char.toLowerCase()
 
     // YOUR CODE ABOVE HERE //
 }
+
+console.log(endsWith("Christian", "c"))
 
 /**
  * Given two input Strings, return the Strings concatenated into one.
