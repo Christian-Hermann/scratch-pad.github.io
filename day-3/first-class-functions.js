@@ -46,16 +46,27 @@ function createLessThanFilter(base) {
  * 
  * This function needs to be case insensitive.
  */
+
+/*
+I: given a single character
+O: tests whether a given string starts with the startswith character
+C: must be case insensitive
+E:
+*/
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+     // convert startsWith to lowercase
+    var lowerChar = startsWith.toLowerCase()
+    // return function with string
     return function(string){
-       
+    // string to lowercase check if starts with lowerchar
+       return string.charAt(0).toLowerCase() === lowerChar
     }
     
     
     // YOUR CODE ABOVE HERE //
 }
+
 
 /** 
  * Given a endsWith character, which will be a single character, return a 
@@ -66,7 +77,17 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+ // convert endsWith to lowercase
+    var endLetter = endsWith.toLowerCase() 
+ // return function with string
+    return function(string){
+ // return last letter of string to compare with last letter
+        return string.charAt(string.length - 1).toLowerCase() === endLetter
+    }
+
+
+
+  
     
     
     
@@ -82,8 +103,13 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
+    var output = []
+
+    for (var i = 0; i < strings.length; i++){
+        output.push(modify(strings[i]))
+    }
+      
+    return output
     
     
     // YOUR CODE ABOVE HERE //
