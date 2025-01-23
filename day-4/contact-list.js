@@ -45,12 +45,24 @@ function makeContactList() {
      * You need something here to hold contacts. See length api for a hint:
      */
     var contacts = [];
-    
+
     return {
         // we implemented the length api for you //
+       length: function(){
+        return contacts.length;
+       },
+       addContact: function(contat){
+        contacts.push(contact);
+       },
+       findContact: function(fullName){
+
+       }
+
+    }
+        
        
     }
-}
+
 
 makeContactList(); // => { length: function(){}, addContact: function(){}, findContact: function(){}  }
 
