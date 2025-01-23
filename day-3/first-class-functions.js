@@ -127,9 +127,18 @@ function modifyStrings(strings, modify) {
  * 
  * TIP: You need to loop over the Strings, right? And pass them to the test?
  */
+
+/*
+I: an array of strings and a function to test in some way
+O: return true if all strings pass the test
+C: NA
+E: NA
+*/
+
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
+    return strings.every(test)
     
     
     
