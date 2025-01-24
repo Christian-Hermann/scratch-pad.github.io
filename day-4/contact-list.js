@@ -35,10 +35,10 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-  return {
+  return{
     id: id,
     nameFirst: nameFirst,
-    nameLast: nameLast
+    nameLast: nameLast,
   }
 } 
 
@@ -55,11 +55,21 @@ function makeContactList() {
        length: function(){
         return contacts.length;
        },
-       addContact: function(contat){
+       addContact: function(contact){
         contacts.push(contact);
        },
        findContact: function(fullName){
-
+        // loop through the contacts list
+        for(var i = 0; i < contacts.length; i ++){
+          // check for firstname and lastname to equal fullname
+          if (contacts[i].nameFirst + " " + contacts[i].nameLast === fullName){
+            return contacts[i]
+          }
+        }
+         return undefined
+       },
+       removeContact: function(contact){
+        
        }
 
     }
