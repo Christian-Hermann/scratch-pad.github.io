@@ -69,13 +69,23 @@ function makeContactList() {
          return undefined
        },
        removeContact: function(contact){
-        
+       var index = contacts.indexOf(contact);
+       if (index > -1){
+        contacts.splice(index, 1)
        }
-
+       },
+       printAllContactNames: function(){
+        var fullNameList = [];
+        for(var i = 0; i < contacts.length; i++){
+        fullNameList.push(contacts[i].nameFirst + " " + contacts[i].nameLast) 
+        } 
+        return fullNameList.join('\n')
+        }
+       }
     }
         
        
-    }
+    
 
 
 makeContactList(); // => { length: function(){}, addContact: function(){}, findContact: function(){}  }
