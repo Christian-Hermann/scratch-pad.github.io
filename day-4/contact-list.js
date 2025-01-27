@@ -70,7 +70,9 @@ function makeContactList() {
        },
        removeContact: function(contact){
         var index = contacts.indexOf(contact);
-        if (index > -1){
+        // if index is not found it will be -1
+        if (index !== -1){
+          // splice = index first, what to remove, third to add if you want
         contacts.splice(index, 1)
        }
        },
@@ -80,6 +82,7 @@ function makeContactList() {
         fullNameList.push(contacts[i].nameFirst + " " + contacts[i].nameLast) 
         } 
         return fullNameList.join('\n')
+      
         }
        }
     }
